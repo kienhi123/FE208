@@ -15,6 +15,7 @@ import { TableAvatarComponent } from './table/table-avatar/table-avatar.componen
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import { TableAvatarComponent } from './table/table-avatar/table-avatar.componen
     TableStatusComponent,
     TableAgeComponent,
     TableAvatarComponent,
+
 
   
   ],

@@ -1,11 +1,59 @@
-<h1>Danh sách teacher</h1>
+<h1 (click)="clickh1()">Danh sách teacher</h1>
 
-  <button class="btn btn-primary">kien</button>
-  <app-table [users]="teachers"></app-table>
+<div>
+  <p>Thêm mới teacher</p>
+  <form action="">
+    <div class="form-group">
+      <label for="">Tên GV</label>
+      <input type="text" class="form-control" (input)="onInput($event,'name')">
+    </div>
 
- <div>
-   Tên sv : <app-name [name]="studentName"></app-name>
-   Mã sv : <app-identity [id]="studentId"></app-identity>
- </div>
+    <div class="form-group">
+      <label for="">Tuổi GV</label>
+      <input type="number" class="form-control" (input)="onInput($event,'age')">
+    </div>
+    
+    <div class="form-group">
+      <label for="">image</label>
+      <input type="text" class="form-control" (input)="onInput($event,'avatar')">
+    </div>
 
- 
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" (input)="onInput($event,'gender')" [checked]="inputValues.gender==='1'">
+      <label class="form-check-label" for="gridRadios2">
+        Nam
+      </label>
+    </div>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" (input)="onInput($event,'gender')" [checked]="inputValues.gender==='0'">
+      <label class="form-check-label" for="gridRadios2">
+        Nữ
+      </label>
+    </div>
+   
+    <div>
+      <button type="button" (click)="onSubmit()">Thêm mới</button>
+    </div>
+  </form>
+</div>
+
+<button class="btn btn-primary" (click)="changeStatus()">{{showStatus ? 'Ẩn' : 'Hiện'}} thị thông tin </button>
+<app-table [users]="teachers" *ngIf="showStatus"></app-table>
+
+<div>
+  <form action="">
+    <input type="text" (keydown)="changeInput($event)">
+    {{inputValue}}
+
+  </form>
+</div>
+
+
+
+
+
+<div>
+  Tên sv : <app-name [name]="studentName"></app-name>
+  Mã sv : <app-identity [id]="studentId"></app-identity>
+</div>
