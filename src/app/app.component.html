@@ -19,14 +19,14 @@
     </div>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" (input)="onInput($event,'gender')" [checked]="inputValues.gender==='1'">
+      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" (input)="onInput($event,'gender')" [checked]="inputValues.gender==='1'" [value]="1">
       <label class="form-check-label" for="gridRadios2">
         Nam
       </label>
     </div>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" (input)="onInput($event,'gender')" [checked]="inputValues.gender==='0'">
+      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" (input)="onInput($event,'gender')" [checked]="inputValues.gender==='0'" [value]="0">
       <label class="form-check-label" for="gridRadios2">
         Nữ
       </label>

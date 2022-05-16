@@ -58,8 +58,7 @@ export class AppComponent {
    }
    // Định ngĩa hàm giá trị Input
 
-  inputVales = {
-   
+  inputValues = {
     name:'',
     age:'',
     avatar:'',
@@ -78,24 +77,24 @@ export class AppComponent {
 
   // key:'name'| 'age'=> key chỉ nhận dc name và age
   onInput(event:any,key:'name'|'age'|'avatar'|'gender'){
-       this.inputVales[key]=event.target.value
+       this.inputValues[key]=event.target.value
   }
 
   onSubmit(){
-   console.log(this.inputVales)
+   console.log(this.inputValues)
    // Thêm dữ liệu vừa thao tác form vào bảng teacher
      
    this.teachers.push({
-     ...this.inputVales,
-     age:+this.inputVales.age,
-     gender:+this.inputVales.gender,
+     ...this.inputValues,
+     age:+this.inputValues.age,
+     gender:+this.inputValues.gender,
      status:0,
      id: this.teachers.length+1
    });
  // Cập nhật giá trị cho input ở form
 // [value]="this.inputvalues.name"
 
-  this.inputVales = {
+  this.inputValues = {
     name:'',
     age:'',
     avatar:'',
