@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -12,6 +11,9 @@ import { TableGenderComponent } from './table/table-gender/table-gender.componen
 import { TableStatusComponent } from './table/table-status/table-status.component';
 import { TableAgeComponent } from './table/table-age/table-age.component';
 import { TableAvatarComponent } from './table/table-avatar/table-avatar.component';
+import { FormsModule } from '@angular/forms';
+import { FormComponent } from './form/form.component';
+import { CompoentvalidatesComponent } from './compoentvalidates/compoentvalidates.component';
 
 
 
@@ -26,7 +28,8 @@ import { TableAvatarComponent } from './table/table-avatar/table-avatar.componen
     TableGenderComponent,
     TableStatusComponent,
     TableAgeComponent,
-    TableAvatarComponent,
+    TableAvatarComponent, 
+       FormComponent, CompoentvalidatesComponent,
 
 
   
@@ -34,8 +37,9 @@ import { TableAvatarComponent } from './table/table-avatar/table-avatar.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
-  ],
+    NgbModule,
+        FormsModule 
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,25 @@
+<!-- <p>{{userForm.valid| json}}</p> -->
+
+
+<form action="" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+    <div class="form-group">
+        <label for="">Tên users</label>
+        <input type="text" class="form-control" name="name" ngModel required minlength="6" #name="ngModel">
+        <!-- <span>{{name.dirty| json}}</span>  -->
+        <!-- chỉ có 1 lần là true -->
+        <span class="text-danger" *ngIf="name.dirty && name.errors?.['required']">Tên không được để trống</span>
+        <span class="text-danger" *ngIf="name.dirty && name.errors?.['minlength']">Nhập trên 6 kí tự</span>
+
+    </div>
+    <div class="form-group">
+        <label for="">Tuổi users</label>
+        <input type="number" class="form-control" name="age" ngModel required min="1" max="100" #age="ngModel">
+        <span class="text-danger" *ngIf="age.dirty &&  age.errors?.['required']">Tuổi không để trống</span>
+        <span class="text-danger" *ngIf="age.dirty && age.errors?.['min']">Nhập lớn hơn 1</span>
+        <span class="text-danger" *ngIf="age.dirty && age.errors?.['max']">Tối đa 100</span>
+    </div>
+    <div>
+        <button class="btn btn-success"  [disabled]="!userForm.valid">Submit</button>
+    </div>
+</form>
+

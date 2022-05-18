@@ -38,13 +38,16 @@ export class AppComponent {
       status:1
      }
 
-   ]
+   ];
    studentName="kien13deptrai";
    studentId="2002deptrai"
 
    clickh1(){
      console.log('Đã click thành công')
    }
+    
+  
+   
    // Định nghĩa hàm khi click bảng
    showStatus=true;
    changeStatus(){
