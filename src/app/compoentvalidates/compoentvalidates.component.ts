@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-compoentvalidates',
@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./compoentvalidates.component.css']
 })
 export class CompoentvalidatesComponent implements OnInit {
-
-  constructor() { }
+   @Input () field:any
+   @Input () key:string
+  constructor() { 
+    this.key='';
+  }
 
   ngOnInit(): void {
   }
