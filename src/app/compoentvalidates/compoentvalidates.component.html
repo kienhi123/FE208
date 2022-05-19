@@ -1,7 +1,7 @@
-<span class="text-danger" *ngIf="field.dirty && field.errors?.['required']">{{key}} không được để trống</span>
- <span class="text-danger" *ngIf="field.dirty && field.errors?.['minlength']">Nhập trên 6 kí tự</span>
+<span class="text-danger" *ngIf="(field.dirty || field.touched)&& field.errors?.['required']">{{key}} không được để trống</span>
+ <span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['minlength']">Nhập trên 6 kí tự</span>
 
-     <span class="text-danger" *ngIf="field.dirty && field.errors?.['min']">Nhập lớn hơn 1</span>
-   <span class="text-danger" *ngIf="field.dirty && field.errors?.['max']">Tối đa 100</span>
+   <span class="text-danger" *ngIf="(field.dirty || field.touched)&& field.errors?.['min']">Nhập lớn hơn 1</span>
+   <span class="text-danger" *ngIf="(field.dirty || field.touched)&& field.errors?.['max']">Tối đa 100</span>
 
-   <span class="text-danger" *ngIf="field.dirty && field.errors?.['email']">{{key}} nhập đúng định dạng </span>
+   <span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['email']">{{key}} nhập đúng định dạng </span>
