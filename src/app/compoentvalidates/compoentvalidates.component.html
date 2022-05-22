@@ -5,3 +5,4 @@
    <span class="text-danger" *ngIf="(field.dirty || field.touched)&& field.errors?.['max']">Tối đa 100</span>
 
    <span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['email']">{{key}} nhập đúng định dạng </span>
+   <span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['sdt']">{{key}} Không được bỏ trống </span>
