@@ -1,0 +1,32 @@
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Tuổi</th>
+                <th>Email</th>
+                <th>SĐT</th>
+                <th>avatar</th>
+                <th>Acction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.sdt}}</td>
+                <td><img src={{user.avatar}} alt="" width="100px"></td>
+                <td>
+                    <button (click)="onDelete(user.id)">Delete</button>
+                </td>
+                <td>
+                    <button (click)="onEdit(user.id)">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

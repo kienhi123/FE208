@@ -14,6 +14,9 @@ import { TableAvatarComponent } from './table/table-avatar/table-avatar.componen
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
 import { CompoentvalidatesComponent } from './compoentvalidates/compoentvalidates.component';
+import { UserComponent } from './table/user/user.component';
+import { UserListComponent } from './table/user/user-list/user-list.component';
+import { UserFormComponent } from './table/user/user-form/user-form.component';
 
 
 
@@ -29,7 +32,7 @@ import { CompoentvalidatesComponent } from './compoentvalidates/compoentvalidate
     TableStatusComponent,
     TableAgeComponent,
     TableAvatarComponent, 
-       FormComponent, CompoentvalidatesComponent,
+       FormComponent, CompoentvalidatesComponent, UserComponent, UserListComponent, UserFormComponent,
 
 
   
