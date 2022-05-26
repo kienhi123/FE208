@@ -1,6 +1,17 @@
 <h1 (click)="clickh1()">Danh sách teacher</h1>
-
 <div>
+  <h1>Router</h1>
+   <nav>
+       <ul>
+          <!-- sử dụng rouerLink để thay thế href -->
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/user">User</a></li> 
+
+       </ul>
+   </nav>
+  <router-outlet></router-outlet>
+</div>
+<!-- <div>
   <p>Thêm mới teacher</p>
   <form action="">
     <div class="form-group">
@@ -36,30 +47,30 @@
       <button type="button" (click)="onSubmit()">Thêm mới</button>
     </div>
   </form>
-</div>
+</div> -->
 
-<button class="btn btn-primary" (click)="changeStatus()">{{showStatus ? 'Ẩn' : 'Hiện'}} thị thông tin </button>
-<app-table [users]="teachers" *ngIf="showStatus"></app-table>
-
+<!-- <button class="btn btn-primary" (click)="changeStatus()">{{showStatus ? 'Ẩn' : 'Hiện'}} thị thông tin </button>
+<app-table [users]="teachers" *ngIf="showStatus"></app-table> -->
+<!-- 
 <div>
   <form action="">
     <input type="text" (keydown)="changeInput($event)">
     {{inputValue}}
 
   </form>
-</div>
+</div> -->
 
 
-<div>
+<!-- <div>
   <h1>Angular Form</h1>
   <div>
     <app-user></app-user>
-    <!-- <app-form></app-form> -->
+    <app-form></app-form>
   </div>
-</div>
+</div> -->
 
 
-<div>
+<!-- <div>
   Tên sv : <app-name [name]="studentName"></app-name>
   Mã sv : <app-identity [id]="studentId"></app-identity>
-</div>
+</div> -->

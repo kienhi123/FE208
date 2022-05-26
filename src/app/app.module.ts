@@ -17,6 +17,8 @@ import { CompoentvalidatesComponent } from './compoentvalidates/compoentvalidate
 import { UserComponent } from './table/user/user.component';
 import { UserListComponent } from './table/user/user-list/user-list.component';
 import { UserFormComponent } from './table/user/user-form/user-form.component';
+import { HomeComponent } from './home/home.component';
+import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
 
 
 
@@ -32,7 +34,7 @@ import { UserFormComponent } from './table/user/user-form/user-form.component';
     TableStatusComponent,
     TableAgeComponent,
     TableAvatarComponent, 
-       FormComponent, CompoentvalidatesComponent, UserComponent, UserListComponent, UserFormComponent,
+       FormComponent, CompoentvalidatesComponent, UserComponent, UserListComponent, UserFormComponent, HomeComponent, ClientLayoutComponent,
 
 
   
