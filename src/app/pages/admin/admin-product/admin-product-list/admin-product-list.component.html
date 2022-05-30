@@ -1,0 +1,19 @@
+
+<table class="table ">
+   <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Acition</th>
+        </tr>
+   </thead>
+   <tbody>
+       <tr *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>
+               <a routerLink="/admin/products/{{product.id}}">Detail</a>  
+             </td>
+       </tr>
+   </tbody>
+</table>
