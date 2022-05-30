@@ -19,7 +19,11 @@ import { UserListComponent } from './table/user/user-list/user-list.component';
 import { UserFormComponent } from './table/user/user-form/user-form.component';
 import { HomeComponent } from './home/home.component';
 import { ClientLayoutComponent } from './layouts/client-layout/client-layout.component';
-
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
+import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
+import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
+import {HttpClientModule} from '@angular/common/http'
 
 
 
@@ -34,7 +38,7 @@ import { ClientLayoutComponent } from './layouts/client-layout/client-layout.com
     TableStatusComponent,
     TableAgeComponent,
     TableAvatarComponent, 
-       FormComponent, CompoentvalidatesComponent, UserComponent, UserListComponent, UserFormComponent, HomeComponent, ClientLayoutComponent,
+     FormComponent, CompoentvalidatesComponent, UserComponent, UserListComponent, UserFormComponent, HomeComponent, ClientLayoutComponent, AdminLayoutComponent, AdminProductListComponent, AdminProductFormComponent, AdminProductDetailComponent,
 
 
   
@@ -43,7 +47,8 @@ import { ClientLayoutComponent } from './layouts/client-layout/client-layout.com
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-        FormsModule 
+    FormsModule,
+    HttpClientModule
    ],
   providers: [],
   bootstrap: [AppComponent]

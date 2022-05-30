@@ -7,26 +7,22 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./user-form.component.css']
 })
 export class UserFormComponent implements OnInit {
-
-  // @Input () inputValues:any
-   
+  // @Input () inputValues:
   @Input () inputValues:{
     id:number,
     name:string,
-    age:number,
-    email:string
+    age:number
   }
   // 1. Định nghĩa sự kiện để bắn dữ liệu ngược lại
    @Output() hanldeSubmit:EventEmitter<any>;
   constructor() {
     // 2. Khai báo giá trị deffaut
     this.hanldeSubmit= new EventEmitter();
-    this.inputValues = {
-      id: 0,
-      name: '',
-      age: 0,
-      email: ''
-    };
+    this.inputValues= {
+      id:0,
+      name:'',
+      age:0
+    }
    }
 
   ngOnInit(): void {
@@ -38,9 +34,8 @@ export class UserFormComponent implements OnInit {
     userForm.resetForm({
       name: '',
       age: 0,
-      email: '',
-      sdt:'',
-      avatar:''
+    
+  
     });
   }
 
