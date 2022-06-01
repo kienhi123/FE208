@@ -13,6 +13,7 @@ import { TableAgeComponent } from './table/table-age/table-age.component';
 import { TableAvatarComponent } from './table/table-avatar/table-avatar.component';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CompoentvalidatesComponent } from './compoentvalidates/compoentvalidates.component';
 import { UserComponent } from './table/user/user.component';
 import { UserListComponent } from './table/user/user-list/user-list.component';
@@ -48,7 +49,8 @@ import {HttpClientModule} from '@angular/common/http'
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
    ],
   providers: [],
   bootstrap: [AppComponent]

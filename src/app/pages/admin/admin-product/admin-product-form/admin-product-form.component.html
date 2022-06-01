@@ -1,1 +1,15 @@
-<p>admin-product-form works!</p>
+<!-- Định nghĩa biến qản lý form  -->
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="">Name</label>
+        <!-- Định nghĩa thuộc tính để lắng nghhe input -->
+        <input type="text" class="form-control" formControlName="name">
+    </div>
+    <app-compoentvalidates [field]="productForm.get('name')"
+    key="Tên sản phẩm">
+        
+    </app-compoentvalidates>
+    <div>
+        <button class="btn btn-success" [disabled]="!productForm.valid">Submit</button>
+    </div>
+</form>

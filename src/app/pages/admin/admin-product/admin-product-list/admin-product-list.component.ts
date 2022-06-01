@@ -12,12 +12,23 @@ export class AdminProductListComponent implements OnInit {
   constructor(private productService:ProductService) { 
     this.products=[]
   }
-
   ngOnInit(): void {
-  
-    this.productService.getProducts().subscribe((data)=>{
-      this.products=data
+    this.onGetlist()
+}
+onGetlist(){
+  this.productService.getProducts().subscribe((data)=>{
+    this.products=data
+});
+}
+onDelete(id:string | number){
+  // confirm
+   const confirmDelete = confirm('Bạn có muốn xóa không')
 
-  });
+   if(confirmDelete && id){
+      this.productService.deleteProduct(id).subscribe((data)=>{
+        // Cập nhật danh sách
+        this.onGetlist();
+      })
+   }
 }
 }

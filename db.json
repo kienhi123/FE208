@@ -1,16 +1,16 @@
 {
-  "products":[
-      {  
-        "id":1,
-        "name": "Iphone 12"
-      },
-      {  
-          "id":2,
-          "name": "Iphone 13"
-        },
-        {  
-          "id":3,
-          "name": "Iphone 14"
-        }
+  "products": [
+    {
+      "name": "iphone 133",
+      "id": 3
+    },
+    {
+      "name": "Đẹp trai",
+      "id": 4
+    },
+    {
+      "name": "hihi123",
+      "id": 5
+    }
   ]
 }
