@@ -20,10 +20,10 @@ onGetlist(){
     this.products=data
 });
 }
+
 onDelete(id:string | number){
   // confirm
    const confirmDelete = confirm('Bạn có muốn xóa không')
-
    if(confirmDelete && id){
       this.productService.deleteProduct(id).subscribe((data)=>{
         // Cập nhật danh sách

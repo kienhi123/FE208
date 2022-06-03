@@ -16,8 +16,12 @@ export class AdminProductDetailComponent implements OnInit {
   ) { 
     this.product={
       id:0,
-      name:''
-    };
+      name:'',
+      price:0,
+      img:'',
+      desc:'',
+      status:0,
+   };
   }
   ngOnInit(): void {
     const idFromUrl = this.activateRoute.snapshot.params['id']

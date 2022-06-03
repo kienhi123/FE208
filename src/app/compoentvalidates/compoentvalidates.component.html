@@ -6,3 +6,6 @@
 
    <span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['email']">{{key}} nhập đúng định dạng </span>
    <span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['sdt']">{{key}} Không được bỏ trống </span>
+
+
+   <span class="text-danger" *ngIf="(field.dirty || field.touched) && field.errors?.['hasProductError']">{{key}} phải chứa 'product' </span>

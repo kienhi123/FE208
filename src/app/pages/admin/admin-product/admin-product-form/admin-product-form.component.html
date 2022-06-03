@@ -9,6 +9,30 @@
     key="Tên sản phẩm">
         
     </app-compoentvalidates>
+    <div class="form-group">
+        <label for="">Price</label>
+        <!-- Định nghĩa thuộc tính để lắng nghhe input -->
+        <input type="number" class="form-control" formControlName="price">
+    </div>
+    <app-compoentvalidates [field]="productForm.get('price')"
+    key="Giá sản phẩm">  
+    </app-compoentvalidates>
+    <div class="form-group">
+        <label for="">Image</label>
+        <!-- Định nghĩa thuộc tính để lắng nghhe input -->
+        <input type="text" class="form-control" formControlName="img">
+    </div>
+    <app-compoentvalidates [field]="productForm.get('img')"
+    key="Image sản phẩm">
+    </app-compoentvalidates>
+    <div class="form-group">
+        <label for="">Mô tả</label>
+        <!-- Định nghĩa thuộc tính để lắng nghhe input -->
+        <input type="text" class="form-control" formControlName="desc">
+    </div>
+    <app-compoentvalidates [field]="productForm.get('desc')"
+    key="Mô tả sản phẩm">
+    </app-compoentvalidates>
     <div>
         <button class="btn btn-success" [disabled]="!productForm.valid">Submit</button>
     </div>

@@ -8,6 +8,10 @@
         <tr>
             <th>ID</th>
             <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Mô tả</th>
+            <th>Trạng thái</th>
             <th>Acition</th>
         </tr>
    </thead>
@@ -15,11 +19,26 @@
        <tr *ngFor="let product of products">
             <td>{{product.id}}</td>
             <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td><img src="{{product.img}}" alt="" width="120px"></td>
+            <td>{{product.desc}}</td>
             <td>
-               <a routerLink="/admin/products/{{product.id}}">Detail</a> 
+                <button class="btn btn-dark" *ngIf="product.status===1">ON</button>
+                <button class="btn btn-success" *ngIf="product.status===0">OF</button>
+
+            </td>
+            <td>
+               <a routerLink="/admin/products/{{product.id}}">Chi tiết </a> 
              </td>
              <td>
                 <button class="btn btn-danger" (click)="onDelete(product.id)">Delete</button> 
+                
+             </td>
+             <td>
+                <a routerLink="/admin/products/edit/{{product.id}}">
+                    <button class="btn btn-danger">Edit</button>
+                
+                </a> 
 
              </td>
        </tr>
