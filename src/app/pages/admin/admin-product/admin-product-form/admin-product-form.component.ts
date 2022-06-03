@@ -60,14 +60,14 @@ export class AdminProductFormComponent implements OnInit {
   onSubmit() {
     console.log(this.productForm)
     //  1 Nhận dữ liệu từ form
-    const data = this.productForm.value;
-    if (this.productId! = '' && this.productId == undefined) {
-      return this.productService.updateEdit(this.productId, data).subscribe(data => {
+    const data = this.productForm.value; // update
+    if (this.productId! = '' && this.productId == undefined) { 
+      return this.productService.updateProduct(this.productId, data).subscribe(data => {
         this.redirectToList
       })
     }
     // 2 Call tạo API mới
-    return this.productService.createProduct(data).subscribe(data => {
+    return this.productService.createProduct(data).subscribe(data => {  // Thêm mới
       // 3 Quay lại danh sách product
       // this.router.navigate(['/admin','products'])
       this.redirectToList();

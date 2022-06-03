@@ -1,61 +1,28 @@
 {
   "products": [
     {
-      "name": "iphone 133",
-      "price": 12,
-      "img": "https://cdn.tgdd.vn/GameApp/1257005/huong-dan-choi-florentino-mua-14-bang-ngoc-phu-hieu-va-cach-choi-thumb800-800x450.jpg",
-      "desc": "Mô tả 1",
-      "status":0,
-      "id": 3
-    },
-    {
-      "name": "Đẹp trai",
-      "price": 13,
-      "img": "https://cdn.tgdd.vn/GameApp/1257005/huong-dan-choi-florentino-mua-14-bang-ngoc-phu-hieu-va-cach-choi-thumb800-800x450.jpg",
-      "desc": "Mô tả 2",
-      "status":0,
-      "id": 4
-    },
-    {
-      "name": "kien111",
-      "price": 2222,
-      "img": "https://cdn.tgdd.vn/GameApp/1257005/huong-dan-choi-florentino-mua-14-bang-ngoc-phu-hieu-va-cach-choi-thumb800-800x450.jpg",
-      "desc": "Mô tả 4",
-      "status":0,
-      "id": 6
-    },
-    {
-      "name": "helo11",
-      "price": 22113,
-      "img": "https://znews-photo.zingcdn.me/w660/Uploaded/qhj_yvobvhfwbv/2018_07_18/Nguyen_Huy_Binh1.jpg",
-      "desc": "Good luck",
-      "status":0,
-      "id": 7
-    },
-    {
-      "name": "kienproduct",
+      "name": "product 1",
       "price": 11,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_90JWHy0OlcfBTEe7R1CO_n3taO_VcFb0LQ&usqp=CAU",
-      "desc": "mô tả 777",
-      "status":0,
-      "id": 8
-    },
-    {
-      "name": "iphone 133 product",
-      "price": 12,
-      "img": "https://cdn.tgdd.vn/GameApp/1257005/huong-dan-choi-florentino-mua-14-bang-ngoc-phu-hieu-va-cach-choi-thumb800-800x450.jpg",
+      "img": "https://halotravel.vn/wp-content/uploads/2020/03/congthucchinhanh.jpg",
       "desc": "Mô tả 1",
-      "status":0,
-      "id": 9
+      "status": 0,
+      "id": 1
     },
     {
-      "name": "product 123",
-      "price": 200,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8fu9NutmAZ_h7ZUDqfWPMvYbbE5VRDWGpTA&usqp=CAU",
-      "desc": "moo",
-      "status":0,
-      "id": 10
+      "name": "product 2",
+      "price": 21,
+      "img": "https://halotravel.vn/wp-content/uploads/2020/03/congthucchinhanh.jpg",
+      "desc": "Mô tả 2",
+      "status": 1,
+      "id": 2
+    },
+    {
+      "name": "product 3",
+      "price": 113,
+      "img": "https://halotravel.vn/wp-content/uploads/2020/03/congthucchinhanh.jpg",
+      "desc": "Mô tả 3",
+      "status": 0,
+      "id": 1
     }
- 
   ]
 }

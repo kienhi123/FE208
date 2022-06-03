@@ -7,11 +7,11 @@ export type Product = {
     status:number
 }
 export type ProductCreate={
-    name:string
-    price:number
-    img:string
-    desc:string
-    status:number
+    name?:string
+    price?:number
+    img?:string
+    desc?:string
+    status?:number
 
 }
 

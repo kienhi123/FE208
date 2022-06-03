@@ -20,7 +20,13 @@ onGetlist(){
     this.products=data
 });
 }
-
+onUpdateStatus(productId: number, newStatus: number) {
+  this.productService.updateProduct(`${productId}`, {
+    status: newStatus
+  }).subscribe(data => {
+    this.onGetlist();
+  });
+}
 onDelete(id:string | number){
   // confirm
    const confirmDelete = confirm('Bạn có muốn xóa không')
