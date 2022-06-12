@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-admin-product-form',
   templateUrl: './admin-product-form.component.html',
@@ -13,7 +14,8 @@ export class AdminProductFormComponent implements OnInit {
   constructor(
     private productService: ProductService, // Các phương thức API
     private router: Router,
-    private activateRoute: ActivatedRoute
+    private activateRoute: ActivatedRoute,
+    private toastr:ToastrService
   ) {
     this.productForm = new FormGroup({
       name: new FormControl('', [
@@ -22,7 +24,7 @@ export class AdminProductFormComponent implements OnInit {
         Validators.maxLength(20),
         this.onValidateNameHasProduct]),
       // FormControl(giá trị mặc định)
-      price: new FormControl('0', [Validators.required]),
+      price: new FormControl('', [Validators.required]),
       img: new FormControl('', [Validators.required]),
       desc: new FormControl('', [Validators.required]),
 
@@ -32,9 +34,8 @@ export class AdminProductFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.productId = this.activateRoute.snapshot.params['id']
-
     if (this.productId) {
-      this.productService.getProduct(+this.productId).subscribe(data => {
+      this.productService.getProduct(this.productId).subscribe(data => {
         this.productForm.patchValue({
           name: data.name,
           price: data.price,
@@ -46,30 +47,30 @@ export class AdminProductFormComponent implements OnInit {
   }
   onValidateNameHasProduct(control: AbstractControl): ValidationErrors | null {
     const inputValue = control.value;
-
     if (!inputValue.includes('product')) {
       return { hasProductError: true };
     }
     return null;
   }
-
   redirectToList() {
-    this.router.navigate(['/admin', 'products'])
+    this.router.navigateByUrl('/admin/products')
   }
-
   onSubmit() {
-    console.log(this.productForm)
+    // console.log(this.productForm)
     //  1 Nhận dữ liệu từ form
-    const data = this.productForm.value; // update
-    if (this.productId! = '' && this.productId == undefined) { 
+   const data = this.productForm.value; // update
+  //  console.log(data)
+   this.toastr.success('Thêm thành công')
+    if (this.productId !== '' && this.productId !== undefined) {
       return this.productService.updateProduct(this.productId, data).subscribe(data => {
-        this.redirectToList
+        this.redirectToList()
+      
       })
     }
     // 2 Call tạo API mới
     return this.productService.createProduct(data).subscribe(data => {  // Thêm mới
       // 3 Quay lại danh sách product
-      // this.router.navigate(['/admin','products'])
+      //  this.router.navigate(['/admin','products'])
       this.redirectToList();
       // 3.1 Khi đã quay về list thì ngOnInit trong list sẽ dc chạy và call API
     })

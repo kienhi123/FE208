@@ -14,7 +14,7 @@ export class ProductService {
   getProducts ():Observable<Product[]> {
      return this.http.get<Product[]>(environment.products)
   }
-  getProduct(id:number):Observable<Product>{
+  getProduct(id:string | string):Observable<Product>{
     return this.http.get<Product>(`${environment.products}/${id}`);
   }
   deleteProduct(id:number | string): Observable<any>{
@@ -24,7 +24,7 @@ export class ProductService {
   createProduct(data:ProductCreate):Observable<Product>{
     return this.http.post<Product>(`${environment.products}`,data)
   }
-  updateProduct(id:string, data:ProductCreate):Observable<Product>{
+  updateProduct(id:number | string, data:ProductCreate):Observable<Product>{
     return this.http.patch<Product>(`${environment.products}/${id}`,data)
   }
 }

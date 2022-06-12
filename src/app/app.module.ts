@@ -24,7 +24,14 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
+import { ToastrModule } from 'ngx-toastr';
+import { CartComponent } from './pages/cart/cart.component';
+import { ProductDetailComponent } from './layouts/product-detail/product-detail.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { UsersListComponent } from './pages/users-list/users-list.component';
+// import { ProductsComponent } from './service/products/products.component';
 
 
 
@@ -39,7 +46,7 @@ import {HttpClientModule} from '@angular/common/http'
     TableStatusComponent,
     TableAgeComponent,
     TableAvatarComponent, 
-     FormComponent, CompoentvalidatesComponent, UserComponent, UserListComponent, UserFormComponent, HomeComponent, ClientLayoutComponent, AdminLayoutComponent, AdminProductListComponent, AdminProductFormComponent, AdminProductDetailComponent,
+    FormComponent, CompoentvalidatesComponent, UserComponent, UserListComponent, UserFormComponent, HomeComponent, ClientLayoutComponent, AdminLayoutComponent, AdminProductListComponent, AdminProductFormComponent, AdminProductDetailComponent, LoginComponent, CartComponent, ProductDetailComponent, SignupComponent, UsersListComponent,
 
 
   
@@ -50,7 +57,11 @@ import {HttpClientModule} from '@angular/common/http'
     NgbModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule.forRoot({
+      timeOut:2000,
+      positionClass: 'toast-top-right'
+    })
    ],
   providers: [],
   bootstrap: [AppComponent]

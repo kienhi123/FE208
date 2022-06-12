@@ -1,17 +1,43 @@
 export type Product = {
-    id:number,  // Nếu dùng nodejs thì string
+    _id:string  // Nếu dùng nodejs thì string
     name:string 
-    price:number
+    price:string
     img:string
     desc:string
     status:number
 }
 export type ProductCreate={
+    _id?:string,
     name?:string
-    price?:number
+    price?:string
     img?:string
     desc?:string
     status?:number
 
+}
+export type ProductCart = {
+    id:string
+    name:string
+    value:number
+}
+export type Category = {
+    id: string,
+    name: string,
+    
+}
+export type Products = {
+    id:string
+    name: string,
+    img:string,
+    price:string,
+    desc:string
+}
+
+
+export type Users = {
+    _id:string
+    name:string,
+    email:string
+    password:string
 }
 

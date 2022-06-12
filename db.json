@@ -1,28 +1,27 @@
 {
   "products": [
     {
-      "name": "product 1",
-      "price": 11,
+      "name": "product 459",
+      "price": 233,
       "img": "https://halotravel.vn/wp-content/uploads/2020/03/congthucchinhanh.jpg",
-      "desc": "Mô tả 1",
-      "status": 0,
+      "desc": "Mô tả 2",
+      "status": 1,
       "id": 1
     },
     {
-      "name": "product 2",
-      "price": 21,
+      "name": "product 41",
+      "price": 2133,
       "img": "https://halotravel.vn/wp-content/uploads/2020/03/congthucchinhanh.jpg",
       "desc": "Mô tả 2",
       "status": 1,
       "id": 2
-    },
+    }
+  ],
+  "users": [
     {
-      "name": "product 3",
-      "price": 113,
-      "img": "https://halotravel.vn/wp-content/uploads/2020/03/congthucchinhanh.jpg",
-      "desc": "Mô tả 3",
-      "status": 0,
-      "id": 1
+      "id": 1,
+      "email": "kien123@gmail.com",
+      "password": "$2a$12$Rkip/.NUSJYosfEY.ow1suib5UmF/hbYUy47aAgGiEDmJWlJhs1NW"
     }
   ]
 }

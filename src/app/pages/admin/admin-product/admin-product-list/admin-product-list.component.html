@@ -1,10 +1,11 @@
 <div>
+
     <a href="/admin/products/create">
         <button class="btn btn-primary">Thêm mới</button>
     </a>
 </div>
-<table class="table ">
-   <thead>
+<table class="table">
+   <thead class="table-warning">
         <tr>
             <th>ID</th>
             <th>Name</th>
@@ -12,35 +13,32 @@
             <th>Image</th>
             <th>Mô tả</th>
             <th>Trạng thái</th>
-            <th>Acition</th>
+            <th>Chức năng</th>
         </tr>
    </thead>
    <tbody>
        <tr *ngFor="let product of products">
-            <td>{{product.id}}</td>
+            <td>{{product._id}}</td>
             <td>{{product.name}}</td>
             <td>{{product.price}}</td>
             <td><img src="{{product.img}}" alt="" width="120px"></td>
             <td>{{product.desc}}</td>
             <td>
-                <button class="btn btn-dark" (click)="onUpdateStatus(product.id,0)" *ngIf="product.status===1">ON</button>
-                <button class="btn btn-success"  (click)="onUpdateStatus(product.id,1)" *ngIf="product.status===0">OF</button>
-
+                <button class="btn btn-dark" (click)="onUpdateStatus(product._id,0)" *ngIf="product.status===1">ON</button>
+                <button class="btn btn-warning"  (click)="onUpdateStatus(product._id,1)" *ngIf="product.status===0">OF</button>
             </td>
             <td>
-               <a routerLink="/admin/products/{{product.id}}">Chi tiết </a> 
+               <a routerLink="/admin/products/{{product._id}}">Chi tiết </a> 
              </td>
              <td>
-                <button class="btn btn-danger" (click)="onDelete(product.id)">Delete</button> 
-                
+                <button class="btn btn-danger" (click)="onDelete(product._id)">Delete</button> 
              </td>
              <td>
-                <a routerLink="/admin/products/edit/{{product.id}}">
-                    <button class="btn btn-danger">Edit</button>
-                
+                <a routerLink="/admin/products/edit/{{product._id}}">
+                    <button class="btn btn-success">Edit</button>
                 </a> 
-
              </td>
        </tr>
    </tbody>
 </table>
+

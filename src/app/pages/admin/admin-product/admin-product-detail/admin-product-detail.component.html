@@ -4,11 +4,15 @@
     </a>
 </div>
 <div>
-    <div> ID SP:{{product.id}}</div>
+    <div> ID SP:{{product._id}}</div>
     <div> Name SP:{{product.name}}</div>
     <div> Price SP:{{product.price}}</div>
     <div><img src="{{product.img}}" alt="" width="120px"></div>
     <div> Mô tả : {{product.desc}}</div>
+    <div>
+        <input type="number" min="1" [value]="1" value="cartItemValue" (input)="onInputValueChange($event)">
+        <button (click)="onAddToCart()">Thêm vào giỏ hàng</button>
+    </div>
     
 
 </div>
