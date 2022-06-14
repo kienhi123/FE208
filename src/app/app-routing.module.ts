@@ -8,6 +8,7 @@ import { ProductDetailComponent } from './layouts/product-detail/product-detail.
 import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-product-detail/admin-product-detail.component';
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UsersListComponent } from './pages/users-list/users-list.component';
@@ -23,13 +24,15 @@ const routes: Routes = [
       {
         path:':id',
         component:ProductDetailComponent
-      }
+      },
+    
     ]
   },
+  
   {
     path:'admin',
     component:AdminLayoutComponent,
-    //  canActivate:[CanAccessAdminGuard],
+     canActivate:[CanAccessAdminGuard],
     children:[
       {
         path:'products',
@@ -72,6 +75,10 @@ const routes: Routes = [
       {
         path:'login',
         component:LoginComponent
+      },
+      {
+        path:'listproduct',
+        component:CartPageComponent
       }
     ]
   }

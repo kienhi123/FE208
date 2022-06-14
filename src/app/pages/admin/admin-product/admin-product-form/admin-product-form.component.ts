@@ -60,7 +60,7 @@ export class AdminProductFormComponent implements OnInit {
     //  1 Nhận dữ liệu từ form
    const data = this.productForm.value; // update
   //  console.log(data)
-   this.toastr.success('Thêm thành công')
+   this.toastr.success('Update thành công')
     if (this.productId !== '' && this.productId !== undefined) {
       return this.productService.updateProduct(this.productId, data).subscribe(data => {
         this.redirectToList()
@@ -69,7 +69,8 @@ export class AdminProductFormComponent implements OnInit {
     }
     // 2 Call tạo API mới
     return this.productService.createProduct(data).subscribe(data => {  // Thêm mới
-      // 3 Quay lại danh sách product
+      // 3 Quay lại danh sách producta
+      alert("Thêm thành công")
       //  this.router.navigate(['/admin','products'])
       this.redirectToList();
       // 3.1 Khi đã quay về list thì ngOnInit trong list sẽ dc chạy và call API

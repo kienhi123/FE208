@@ -40,6 +40,7 @@ export class AdminProductDetailComponent implements OnInit {
     const addItem = {
       id: this.product._id,
       name: this.product.name,
+      price:this.product.price,
       value: +this.cartItemValue
     };
     // // 2. Kiểm tra xem đã có sp này trong giỏ hàng chưa

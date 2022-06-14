@@ -18,6 +18,7 @@ export type ProductCreate={
 export type ProductCart = {
     id:string
     name:string
+    price:string
     value:number
 }
 export type Category = {
@@ -38,6 +39,6 @@ export type Users = {
     _id:string
     name:string,
     email:string
-    password:string
+   
 }
 

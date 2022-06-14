@@ -55,6 +55,7 @@ export class HomeComponent implements OnInit {
     const addItem = {
       id: this.product._id,
       name: this.product.name,
+      price:this.product.price,
       status: this.product.status,
       value: +this.cartItemValue
     };

@@ -9,7 +9,6 @@ export class LocalStorageService {
   watchStorage() {
     throw new Error('Method not implemented.');
   }
-
   constructor() { }
   // Định nghĩa xem làm cách nào để lắng nghe được lúc thay đổi của ls
   private serviceSubject = new Subject<string>(); // vừa giống Observerble có thể lắng nghe được, vừa phát được sự kiện để lắng nghe
@@ -17,7 +16,6 @@ export class LocalStorageService {
   watchService(): Observable<any> {
     return this.serviceSubject.asObservable();
   }
-
   getItem() {
     return JSON.parse(localStorage.getItem('cart') || '[]');
   }
@@ -32,7 +30,6 @@ export class LocalStorageService {
       existItem.value += addItem.value;
     }
     localStorage.setItem('cart', JSON.stringify(cartItems));
-
     // 2. Phát tín hiệu để lắng nghe bên watchService
     this.serviceSubject.next(''); // báo là vừa thêm rồi đấy, update đi
   }

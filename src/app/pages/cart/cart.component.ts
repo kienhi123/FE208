@@ -22,7 +22,6 @@ export class CartComponent implements OnInit {
       this.onSetCartItems();
     });
   }
-
   onSetCartItems () {
     this.cartItems = this.lsService.getItem();
     this.cartItemValues = 0;
