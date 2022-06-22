@@ -23,7 +23,7 @@ export class AdminProductDetailComponent implements OnInit {
       price:"",
       img:'',
       desc:'',
-      status:0,
+      status:0
    };
   }
   ngOnInit(): void {
@@ -41,6 +41,7 @@ export class AdminProductDetailComponent implements OnInit {
       id: this.product._id,
       name: this.product.name,
       price:this.product.price,
+      img:this.product.img,
       value: +this.cartItemValue
     };
     // // 2. Kiểm tra xem đã có sp này trong giỏ hàng chưa

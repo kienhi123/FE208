@@ -24,8 +24,8 @@
             <td><img src="{{product.img}}" alt="" width="120px"></td>
             <td>{{product.desc}}</td>
             <td>
-                <button class="btn btn-dark" (click)="onUpdateStatus(product._id,0)" *ngIf="product.status===1">ON</button>
-                <button class="btn btn-warning"  (click)="onUpdateStatus(product._id,1)" *ngIf="product.status===0">OF</button>
+                <button class="btn btn-dark" (click)="onUpdateStatus(product._id,0)" *ngIf="product.status===1">Hết hàng</button>
+                <button class="btn btn-warning"  (click)="onUpdateStatus(product._id,1)" *ngIf="product.status===0">Còn hàng</button>
             </td>
             <td>
                <a routerLink="/admin/products/{{product._id}}">Chi tiết </a> 

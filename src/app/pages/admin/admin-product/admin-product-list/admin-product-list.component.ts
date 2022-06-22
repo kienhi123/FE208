@@ -9,10 +9,11 @@ import { Product } from 'src/app/types/Product';
   styleUrls: ['./admin-product-list.component.css']
 })
 export class AdminProductListComponent implements OnInit {
-   products:Product[]
+   products:Product[] // Gán kiểu dữ liệu cho biến
   constructor(
-    private productService:ProductService,
-    private toastr:ToastrService) { 
+    private productService:ProductService, // tìm hiểu sau
+    private toastr:ToastrService
+    ) { 
     this.products=[]
   }
   ngOnInit(): void {

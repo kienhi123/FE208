@@ -22,7 +22,7 @@ export type ProductCart = {
     value:number
 }
 export type Category = {
-    id: string,
+    _id: string,
     name: string,
     
 }
@@ -33,12 +33,19 @@ export type Products = {
     price:string,
     desc:string
 }
-
-
 export type Users = {
     _id:string
     name:string,
     email:string
    
 }
+export type Logout={
+    _id?: string,
+    name?: string,
+    email?:string,
+    password?: string,
+    status: number,
+    role?: number
+}
+
 

@@ -20,7 +20,7 @@ export class CartPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartItems= this.lsStorge.getItem()
-    console.log(this.cartItems);
+    // console.log(this.cartItems);
     this.cartItems.map(item => this.Totalprice += this.onToTalPrice(+item.price!, item.value!))
   }
   onToTalPrice(price:number, value: number): number{

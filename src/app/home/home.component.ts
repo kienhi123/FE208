@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+
 import { LocalStorageService } from '../pages/local-storage.service';
 import { CategoryService } from '../services/category.service';
 import { ProductService } from '../services/product.service';
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
   cartItemValue: number = 1;
   constructor(
     private productService:ProductService,
-    private activateRoute:ActivatedRoute,
+    private router:Router,
     private lsService: LocalStorageService,
     private categoryServices :CategoryService,
     
@@ -39,6 +40,7 @@ export class HomeComponent implements OnInit {
     this.onGetlist()
     this.categoryServices.listCategories().subscribe((data)=>{
       this.category = data
+      console.log(data)
     })
   }
   onGetlist(){
@@ -56,10 +58,18 @@ export class HomeComponent implements OnInit {
       id: this.product._id,
       name: this.product.name,
       price:this.product.price,
+      img:this.product.img,
       status: this.product.status,
       value: +this.cartItemValue
     };
  this.lsService.setItem(addItem);
     this.cartItemValue = 1
+  }
+  onLogOut(){
+    const confirm = window.confirm("Bạn có chắc chắn đăng xuất?")
+    if(confirm){
+      localStorage.removeItem('loggedInUser')
+      this.router.navigateByUrl('/')
+    }
   }
 }

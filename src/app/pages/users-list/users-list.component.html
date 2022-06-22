@@ -1,20 +1,19 @@
-<h1>Danh Sách Uses</h1>
+<h1>Danh Sách Users</h1>
 <table class="table">
     <thead>
       <tr >
         <th scope="col">ID</th>
         <th scope="col">Name</th>
         <th scope="col">Email</th>
-       
-      
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let users of users">
-        <td>{{users._id}}</td>
-        <td>{{users.name}}</td>
-        <td>{{users.email}}</td>
-      
+      <tr *ngFor="let user of users">
+        <td>{{user._id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td><button class="btn btn-info"  (click)="onDelete(user._id)">Delete</button>
        
       </tr>
   

@@ -1,4 +1,4 @@
-import {  NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CanAccessAdminGuard } from './guards/can-access-admin.guard';
 import { HomeComponent } from './home/home.component';
@@ -9,77 +9,78 @@ import { AdminProductDetailComponent } from './pages/admin/admin-product/admin-p
 import { AdminProductFormComponent } from './pages/admin/admin-product/admin-product-form/admin-product-form.component';
 import { AdminProductListComponent } from './pages/admin/admin-product/admin-product-list/admin-product-list.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { CategoryPageComponent } from './pages/category-page/category-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UsersListComponent } from './pages/users-list/users-list.component';
 
 const routes: Routes = [
   {
-    path:'',
-    children:[
+    path: '',
+    children: [
       {
-        path:'',
-        component:HomeComponent
+        path: '',
+        component: HomeComponent
       },
       {
-        path:':id',
-        component:ProductDetailComponent
+        path: ':id',
+        component: ProductDetailComponent
       },
-    
+
     ]
   },
-  
   {
-    path:'admin',
-    component:AdminLayoutComponent,
-     canActivate:[CanAccessAdminGuard],
-    children:[
-      {
-        path:'products',
-        children:[
-                  {
-                    path:'',
-                    component:AdminProductListComponent
-                  },
-                  {
-                    path:'create',
-                    component:AdminProductFormComponent
-                  },
-                  {
-                    path:'edit/:id',
-                    component:AdminProductFormComponent
-                  },
-                  {
-                    path:':id',
-                    component:AdminProductDetailComponent
-                  },          
-        ]
-      
-      },
-      {
-        path:'users',
-        component:UsersListComponent
-      }
-    
-    ],
-  
-
+  path:'category/:id',
+  component:CategoryPageComponent
   },
   {
-    path:'auth',
-    children:[
+    path: 'admin',
+    component: AdminLayoutComponent,
+    canActivate: [CanAccessAdminGuard],
+    children: [
       {
-        path:'signup',
-        component:SignupComponent
+        path: 'products',
+        children: [
+          {
+            path: '',
+            component: AdminProductListComponent
+          },
+          {
+            path: 'create',
+            component: AdminProductFormComponent
+          },
+          {
+            path: 'edit/:id',
+            component: AdminProductFormComponent
+          },
+          {
+            path: ':id',
+            component: AdminProductDetailComponent
+          },
+        ]
       },
       {
-        path:'login',
-        component:LoginComponent
-      },
-      {
-        path:'listproduct',
-        component:CartPageComponent
+        path: 'users',
+        component: UsersListComponent
       }
+    ],
+  },
+  {
+    path: 'auth',
+    children: [
+      {
+        path: 'signup',
+        component: SignupComponent
+      },
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'listproduct',
+        component: CartPageComponent
+      },
+
     ]
   }
 ];
@@ -87,6 +88,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers:[CanAccessAdminGuard]
+  providers: [CanAccessAdminGuard]
 })
 export class AppRoutingModule { }

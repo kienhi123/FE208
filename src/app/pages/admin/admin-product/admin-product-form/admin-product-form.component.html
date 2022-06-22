@@ -33,6 +33,11 @@
     <app-compoentvalidates [field]="productForm.get('desc')"
     key="Mô tả sản phẩm">
     </app-compoentvalidates>
+    <div class="form-group">
+        <label for="">Trạng Thái</label>
+        <!-- Định nghĩa thuộc tính để lắng nghhe input -->
+        <input type="number" class="form-control" formControlName="status">
+    </div>
     <div>
         <button class="btn btn-success" >Submit</button>
     </div>

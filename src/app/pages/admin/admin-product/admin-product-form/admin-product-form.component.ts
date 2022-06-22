@@ -27,6 +27,7 @@ export class AdminProductFormComponent implements OnInit {
       price: new FormControl('', [Validators.required]),
       img: new FormControl('', [Validators.required]),
       desc: new FormControl('', [Validators.required]),
+      status:new  FormControl('', [Validators.required]),
 
     });
     this.productId = '';

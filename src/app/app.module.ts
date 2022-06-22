@@ -32,6 +32,7 @@ import { ProductDetailComponent } from './layouts/product-detail/product-detail.
 import { SignupComponent } from './pages/signup/signup.component';
 import { UsersListComponent } from './pages/users-list/users-list.component';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { CategoryPageComponent } from './pages/category-page/category-page.component';
 // import { ProductsComponent } from './service/products/products.component';
 
 
@@ -47,7 +48,7 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
     TableStatusComponent,
     TableAgeComponent,
     TableAvatarComponent, 
-    FormComponent, CompoentvalidatesComponent, UserComponent, UserListComponent, UserFormComponent, HomeComponent, ClientLayoutComponent, AdminLayoutComponent, AdminProductListComponent, AdminProductFormComponent, AdminProductDetailComponent, LoginComponent, CartComponent, ProductDetailComponent, SignupComponent, UsersListComponent, CartPageComponent,
+    FormComponent, CompoentvalidatesComponent, UserComponent, UserListComponent, UserFormComponent, HomeComponent, ClientLayoutComponent, AdminLayoutComponent, AdminProductListComponent, AdminProductFormComponent, AdminProductDetailComponent, LoginComponent, CartComponent, ProductDetailComponent, SignupComponent, UsersListComponent, CartPageComponent, CategoryPageComponent,
 
 
   

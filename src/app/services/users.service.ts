@@ -14,4 +14,10 @@ export class UsersService {
   listusers(): Observable<Users[]>{
     return this.http.get<Users[]>(environment.users)
   }
+  getUsers ():Observable<Users[]> {
+    return this.http.get<Users[]>(environment.users)
+ }
+  deleteUsers(id:number | string): Observable<any>{
+    return this.http.delete(`${environment.users}/${id}`);
+  }
 }
